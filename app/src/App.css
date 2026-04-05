@@ -1,0 +1,294 @@
+/* App-specific styles */
+
+/* Ensure smooth scrolling behavior */
+html {
+  scroll-behavior: auto;
+}
+
+/* Hide scrollbar for cleaner look while maintaining functionality */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(244, 244, 245, 0.2) transparent;
+}
+
+/* Section transitions */
+.section-transition {
+  transition: opacity 0.3s ease;
+}
+
+/* Pinned section base */
+.pinned-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* Background image treatment */
+.bg-city-grade {
+  filter: saturate(0.85) contrast(1.08) brightness(0.92);
+}
+
+/* Text shadow for readability on images */
+.text-shadow {
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Card glass effect */
+.glass-card {
+  background: rgba(17, 17, 20, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(244, 244, 245, 0.1);
+}
+
+/* Industry pill active state */
+.industry-pill-active {
+  background: #ff8a3d;
+  color: #0b141b;
+}
+
+/* Mock browser styling */
+.mock-browser {
+  background: #1a1a2e;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.mock-browser-bar {
+  background: #252535;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mock-browser-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.mock-browser-dot-red { background: #FF5F57; }
+.mock-browser-dot-yellow { background: #FEBC2E; }
+.mock-browser-dot-green { background: #28C840; }
+
+.mock-browser-url {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: 'IBM Plex Mono', monospace;
+  margin-left: 8px;
+}
+
+/* Service card hover */
+.service-card {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(185, 139, 255, 0.3);
+}
+
+/* Feature list item */
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.feature-item:last-child {
+  border-bottom: none;
+}
+
+.feature-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 138, 61, 0.14);
+  border: 1px solid rgba(255, 138, 61, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #ff8a3d;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Social post styling */
+.social-post {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.social-post:hover {
+  transform: scale(1.05);
+}
+
+/* Review card */
+.review-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 16px;
+  border-left: 3px solid #ff8a3d;
+}
+
+/* Stats card */
+.stat-card {
+  background: rgba(255, 138, 61, 0.06);
+  border: 1px solid rgba(255, 138, 61, 0.24);
+  border-radius: 16px;
+  padding: 28px;
+  text-align: center;
+}
+
+/* CTA button variants */
+.cta-primary {
+  background: #ff8a3d;
+  color: #0b141b;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.cta-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(255, 138, 61, 0.35);
+}
+
+.cta-outline {
+  background: transparent;
+  color: #F4F4F5;
+  border: 1px solid rgba(244, 244, 245, 0.2);
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.cta-outline:hover {
+  background: rgba(244, 244, 245, 0.05);
+  border-color: rgba(244, 244, 245, 0.4);
+}
+
+/* Form input styling */
+.form-input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #F4F4F5;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #ff8a3d;
+  background: rgba(255, 138, 61, 0.08);
+}
+
+/* A subtle handmade-style background for hero and intro sections */
+.handmade-bg {
+  background-color: #0b141b;
+  background-image:
+    radial-gradient(circle at 14% 18%, rgba(255, 138, 61, 0.22) 0%, rgba(255, 138, 61, 0) 38%),
+    radial-gradient(circle at 78% 82%, rgba(255, 195, 122, 0.2) 0%, rgba(255, 195, 122, 0) 42%),
+    linear-gradient(130deg, rgba(18, 30, 39, 0.95) 0%, rgba(10, 21, 29, 1) 100%);
+}
+
+.hero-grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.form-input::placeholder {
+  color: rgba(244, 244, 245, 0.4);
+}
+
+/* Native select dropdowns use browser surfaces; force readable option contrast */
+select.form-input option {
+  color: #0b141b;
+  background-color: #f7f2ea;
+}
+
+select.form-input option:checked,
+select.form-input option:hover {
+  background-color: #ffd5b6;
+  color: #0b141b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pinned-section {
+    min-height: 100vh;
+    height: auto;
+  }
+  
+  .hero-headline {
+    font-size: clamp(36px, 12vw, 64px) !important;
+  }
+  
+  .section-headline {
+    font-size: clamp(32px, 10vw, 48px) !important;
+  }
+}
+
+/* Animation utilities */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Loading state */
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
